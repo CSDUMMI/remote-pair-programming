@@ -68,8 +68,8 @@ def graphql():
             schema,
             data,
             context_value={ 
-                request: request,
-                user: g["accessToken"][accessToken]["id"],
+                "request": request,
+                "id": g["accessToken"][accessToken]["id"],
             },
             debug=app.debug
         )
