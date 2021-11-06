@@ -38,9 +38,6 @@ type Mutation {
     removeLanguage(lang: String): User
 
     adjustExp(topic: String, exp: Int): User
-
-    signup(name: String!, password: String!, languages: [String]): User
-    login(name: String!, password: String!): User
 }
 
 schema {
