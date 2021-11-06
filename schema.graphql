@@ -7,7 +7,6 @@ type Query {
 
 type User {
     id: ID!
-    name: String
     profile: Profile
 }
 
@@ -27,6 +26,21 @@ type Experience {
 type Queue { 
     mode: Mode
     time: Int
+}
+
+type Mutation {
+    enterQueue(mode :Mode): Queue
+    exitQueue: Bool
+
+    changeName(name: String): User
+    
+    addLanguage(lang: String): User
+    removeLanguage(lang: String): User
+
+    adjustExp(topic: String, exp: Int): User
+
+    signup(name: String!, password: String!, languages: [String]): User
+    login(name: String!, password: String!): User
 }
 
 schema {
