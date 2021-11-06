@@ -11,4 +11,6 @@ def resolve_me(_, info):
     request = info.context
     accessToken = request.headers.get("Authorization").split(" ")[1]
 
+@query.field("queue")
+def resolve_queue(_, info):
     
