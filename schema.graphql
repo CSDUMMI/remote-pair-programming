@@ -16,7 +16,12 @@ type Profile {
     queue: Queue
     experience: [Experience]
     languages: [String]
-    
+    goals: [String]
+}
+
+type Experience {
+    topic: String
+    exp: Int
 }
 
 type Queue { 
