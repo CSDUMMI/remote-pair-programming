@@ -1,0 +1,30 @@
+type Query {
+    me: User
+    profile: Profile
+    queue: Queue
+    user(id: ID!): User
+}
+
+type User {
+    id: ID!
+    name: String
+    profile: Profile
+}
+
+type Profile {  
+    name: String
+    queue: Queue
+    experience: [Experience]
+    languages: [String]
+    
+}
+
+type Queue { 
+    mode: Mode
+    time: Int
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}

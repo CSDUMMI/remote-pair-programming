@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from ariadne import gql, make_executable_schema, load_from_schema
+from ariadne import gql, make_executable_schema, load_from_schema, graphql_sync
 from ariadne.constants import PLAYGROUND_HTML
 
 from graphql import query
