@@ -1,6 +1,5 @@
 type Query {
     me: User
-    profile: Profile
     queue: Queue
     user(id: ID!): User
 }
